@@ -1,10 +1,17 @@
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import TicTacToe from "./TicTacToe";
+import theme from "./themes";
 
+const defaultTheme = Object.keys(theme)[0];
 
 function App() {
-  return (
-    <div className="App">
+  const [selectedTheme, setSelectedTheme] = useState(defaultTheme);
 
-    </div>
+  return (
+    <ThemeProvider theme={theme[selectedTheme]}>
+      <TicTacToe />
+    </ThemeProvider>
   );
 }
 
