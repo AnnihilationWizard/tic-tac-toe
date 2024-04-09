@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import TicTacToe from "./TicTacToe";
-import theme from "./themes";
+import theme from "./views/theme";
 
 const defaultTheme = Object.keys(theme)[0];
 
@@ -14,5 +14,6 @@ function App() {
     </ThemeProvider>
   );
 }
+
 
 export default App;
